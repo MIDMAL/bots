@@ -24,6 +24,8 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     
     await update.message.reply_text(f'Привет, {user.first_name}!')
 
+
+
 # Обработчик текстовых сообщений
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     user = update.effective_user
@@ -36,6 +38,10 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     
     # Отвечаем "Привет" на любое сообщение
     await update.message.reply_text('Привет!')
+
+def lock() -> None:
+    """Заблокировать бота."""
+    logger.info("Бот заблокирован")
 
 def main() -> None:
     """Запуск бота."""
