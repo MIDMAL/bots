@@ -39,10 +39,6 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
     # Отвечаем "Привет" на любое сообщение
     await update.message.reply_text('Привет!')
 
-def lock() -> None:
-    """Заблокировать бота."""
-    logger.info("Бот заблокирован")
-
 def main() -> None:
     """Запуск бота."""
     # Создаем таблицу пользователей при запуске
